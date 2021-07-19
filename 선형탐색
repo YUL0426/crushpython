@@ -1,0 +1,62 @@
+//선형 탐색 알고리즘
+def linear_search(element, some_list):  # some_list의 안에 element가 있으면 인덱스를 리턴 
+
+
+    for i in range(0, len(some_list)):
+        if some_list[i] == element:
+            return i
+            # 왼쪽 값부터 시작해서 하나씩 비교해가면서 값을 찾습니다.
+            # 값을 찾으면 바로 리턴해서 불필요한 탐색을 하지 않습니다. 
+               
+               
+    return None
+
+
+
+print(linear_search(2, [2, 3, 5, 7, 11]))
+print(linear_search(0, [2, 3, 5, 7, 11]))
+print(linear_search(5, [2, 3, 5, 7, 11]))
+print(linear_search(3, [2, 3, 5, 7, 11]))
+print(linear_search(11, [2, 3, 5, 7, 11]))
+
+
+//이진 탐색 알고리즘
+def binary_search(element, some_list):  # some_list안에서 원하는 값의 인덱스를 리턴
+
+    start_index = 0  
+    end_index = len(some_list) - 1
+
+
+    while start_index <= end_index:
+    
+        midpoint = (start_index + end_index) // 2
+        
+        if some_list[midpoint] == element:
+            return midpoint
+        elif some_list[midpoint] > element:
+            end_index = midpoint - 1
+        else:
+            start_index = midpoint + 1
+            
+            
+    return None
+
+
+
+print(binary_search(2, [2, 3, 5, 7, 11]))
+print(binary_search(0, [2, 3, 5, 7, 11]))
+print(binary_search(5, [2, 3, 5, 7, 11]))
+print(binary_search(3, [2, 3, 5, 7, 11]))
+print(binary_search(11, [2, 3, 5, 7, 11]))
+
+3. 두 알고리즘 비교
+ 
+선형탐색 알고리즘은 인풋 리스트가 정렬되어 있든 않든 사용할 수 있는 반면
+ 
+이진탐색 알고리즘은 인풋 리스트가 정렬되어 있는 경우에만 사용할 수 있습니다. 
+ 
+하지만 정렬되어 있는 경우에 한해서는 이진탐색 알고리즘이 훨씬 효율적이라고 할 수 있습니다.
+ 
+예를 들어서 페이스북 사용자가 23억명정도라고 하는데
+선형탐색 알고리즘의 경우 원하는 사용자의 자료를 찾을 때 최악의 경우 23억번의 탐색을 해야하는 반면,
+이진탐색 알고리즘을 이용하면 31번만 하면 된다는 이점이 있습니다.
