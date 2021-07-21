@@ -1,0 +1,18 @@
+SELECT * FROM member 
+WHERE gender = 'm'
+    and weight >= 70
+ORDER BY height ASC;
+
+#
+SELECT sign_up_day, email FROM member 
+ORDER BY YEAR(sign_up_day) DESC, email ASC;
+
+#데이터 일부만 추려보기
+SELECT * FROM member
+ORDER BY sign_up_day DESC
+LIMIT 10; // 핵심은 limit
+
+# 영상에서 본 SQL문을 직접 따라해보세요
+SELECT * FROM member
+ORDER BY sign_up_day DESC
+LIMIT 8,2;
