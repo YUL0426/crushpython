@@ -1,0 +1,9 @@
+i = 1
+
+while i<=9:
+    dan = 1
+    while dan <=9:
+        i * dan
+        print(f"{i} * {dan} = {i*dan}")
+        dan += 1
+    i += 1
