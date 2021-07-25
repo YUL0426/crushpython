@@ -1,0 +1,15 @@
+#내 답안
+numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+i=0
+# 인덱스와 원소 출력
+# 코드를 입력하세요.
+for numbers in numbers:
+    print(i, numbers)
+    i+=1
+
+#모범 답안
+numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+
+# 인덱스와 원소 출력
+for i in range(len(numbers)):
+    print(i, numbers[i])
