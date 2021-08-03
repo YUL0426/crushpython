@@ -1,0 +1,21 @@
+import random
+
+# 코드를 작성하세요.
+answer = random.radint(1,20)
+num_tries = 4
+
+guess = -1
+tries = 0 
+
+while guess != answer and tries < num_tries:
+    guess = int(input("기회가 {}번 남았습니다. 1-20 사이의 숫자를 맞혀보세요: ".format(num_tries - tries)))
+    tries += 1 
+    
+    if answer > guess:
+        print("Up")
+    elif answer < guess:
+        print("Down")
+if guess = answer:
+    print("축하합니다. {}번 만에 숫자를 맞히셨습니다.".format(tries))
+else:
+    print("아쉽습니다. 정답은 {}입니다.".format(answer))
