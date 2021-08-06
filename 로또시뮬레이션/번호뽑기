@@ -1,0 +1,19 @@
+import random
+#무작위 숫자를 추출하기 위해 random 함수 import
+def generate_numbers(n):
+#generate_numbers함수 생성
+    numbers = []
+    #무작위 숫자 n개를 담을 리스트 생성
+    while len(numbers) < n:
+        #n보다 하나작은 만큼 리스트를 while문을 돌려준다.
+        num = random.randint(1, 45)
+        if num not in numbers:
+        #중복되는 숫자가 없으면
+            numbers.append(num)
+            #numbers리스트에 num추가
+    return numbers
+    #numbers 리스트 반환
+    #while문 안에 return 하면 한개의 값, 밖에하면 리스트를 반환한다.
+
+
+print(generate_numbers(6))
