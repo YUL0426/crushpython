@@ -1,0 +1,10 @@
+i = 0
+while i < 100:
+    if i < 22:
+        print("난 아직 연애중")
+    elif i == 22:
+        print("여기까진가…?")
+    elif i > 22:
+        print("다시 만나자")
+        i=0
+    i += 1
