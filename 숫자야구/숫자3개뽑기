@@ -1,0 +1,11 @@
+from random import randint
+
+def generate_numbers(n):
+  numbers = []
+  while len(numbers) < n:
+    new_number = randint(0,9)
+    if new_number not in numbers:
+      numbers.append(new_number)
+  return numbers
+
+print(generate_numbers(3))
