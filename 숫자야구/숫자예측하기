@@ -1,0 +1,19 @@
+def take_guess():
+    print("숫자 3개를 하나씩 차례대로 입력하세요.")
+
+    new_guess = []
+    # 코드를 작성하세요.
+    while len(new_guess) < 3:
+    #3번의 입력을 받기 위함
+        new_num = int(input("{}번째 숫자를 입력하세요 : ".format(len(new_guess) + 1)))
+        #새로운 입력을 받기위한 변수, input모양 잘 알아두기
+        if new_num < 0 or new_num > 9:
+            print("범위를 벗어나는 숫자입니다. 다시입력하세요")
+        elif new_num in new_guess:
+            print("중복되는 숫자입니다. 다시입력하세요.")
+        else:
+            new_guess.append(new_num)
+            #if문과 append의 결합
+    return new_guess
+
+    print(take_guess())
