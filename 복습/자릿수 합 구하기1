@@ -1,0 +1,18 @@
+def sum_digit(num):
+ #파라미터 설정***
+ sum = 0
+ #총합을 위한 변수 sum
+ for number in num:
+  #for문으로 받는 자릿수 인덱싱해서 더하기
+  sum = sum + int(number)
+  #파라미터로 받을 때 먼저 num이 어떤자료형인지 안설정 -> 문자열임(그냥 num이니까)
+  #그러므로 num을 정수형 sum에 더할 땐 int형으로 변환해서 더해주
+ return(sum)
+
+sum = 0
+for i in range(1,1001,1):
+ sum = sum + sum_digit(str(i))
+ #왜 int(i)가아니라 str(i)인가, 왜냐하면 파라미터로 받는 num이 문자열 num으로 받아서....!
+print(sum)
+#for문 안쪽이면 1000까지 모두다나오고
+#for문 바깥쪽이면 1000까지의 합만 출
