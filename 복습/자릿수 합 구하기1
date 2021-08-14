@@ -1,18 +1,10 @@
-def sum_digit(num):
- #파라미터 설정***
- sum = 0
- #총합을 위한 변수 sum
- for number in num:
-  #for문으로 받는 자릿수 인덱싱해서 더하기
-  sum = sum + int(number)
-  #파라미터로 받을 때 먼저 num이 어떤자료형인지 안설정 -> 문자열임(그냥 num이니까)
-  #그러므로 num을 정수형 sum에 더할 땐 int형으로 변환해서 더해주
- return(sum)
+함수 sum_digit은 파라미터로 정수형 num을 받고, num의 각 자릿수를 더한 값을 리턴합니다.
+예를 들어서 12의 각 자릿수는 1, 2이니까 sum_digit(12)는 3(1 + 2)을 리턴합니다.
+마찬가지로 486의 각 자릿수는 4, 8, 6이니까 sum_digit(486)은 18(4 + 8 + 6)을 리턴하는 거죠.
+여러분이 해야 할 일은 두 가지입니다.
 
-sum = 0
-for i in range(1,1001,1):
- sum = sum + sum_digit(str(i))
- #왜 int(i)가아니라 str(i)인가, 왜냐하면 파라미터로 받는 num이 문자열 num으로 받아서....!
-print(sum)
-#for문 안쪽이면 1000까지 모두다나오고
-#for문 바깥쪽이면 1000까지의 합만 출
+sum_digit 함수를 작성한다.
+sum_digit(1)부터 sum_digit(1000)까지의 합을 구해서 출력한다.
+
+실행 결과
+13501
