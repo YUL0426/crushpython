@@ -1,0 +1,35 @@
+#내 정답
+def consecutive_sum(start, end):
+    # 코드를 작성하세요
+    sum = 0
+    #start 부터 end까지의 합을 계산하기 위한 변수 sum
+    for i in range(start, end+1):
+    #range를 start부터 end까지하면 end는 포함이 안되므로 end+1
+        sum += start
+        start += 1
+    return sum
+
+
+# 테스트
+print(consecutive_sum(1, 10))
+print(consecutive_sum(1, 100))
+print(consecutive_sum(1, 253))
+print(consecutive_sum(1, 388))
+
+#divde and conquer방식
+def consecutive_sum(start, end):
+    # base case        
+    if end == start:
+        return start
+
+    # 부분 문제를 반으로 나눠주기 위해서 문제의 정중앙을 정의한다 (Divide)
+    mid = (start + end) // 2
+
+    # 각 부분 문제를 재귀적으로 풀고(Conquer), 부분 문제의 답을 서로 더한다(Combine).
+    return consecutive_sum(start, mid) + consecutive_sum(mid + 1, end)
+
+# 테스트
+print(consecutive_sum(1, 10))
+print(consecutive_sum(1, 100))
+print(consecutive_sum(1, 253))
+print(consecutive_sum(1, 388))
