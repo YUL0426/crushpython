@@ -41,6 +41,7 @@ def sublist_max(profits):
     for i in range(len(profits)):
         for j in range(len(profits)):
             sum_max = max(sum(profits[i:j + 1]), sum_max)
+            #for문은 계속 돌고 있다.
     #Q함수 sum
     return sum_max
 
