@@ -34,8 +34,10 @@ def merge_sort(my_list):
      #base케이스로, 리스트 크기가 1이라면 바로 반환
         
     mid = len(my_list)//2
-    #중간값 설정
+    #중간값 설정(리스트를 반으로 나누기 위해 리스트 크기의 중간값을 변수로 선언해줍니다.)
     return merge(merge_sort(my_list[:mid]), merge_sort(my_list[mid:]))
+    #merge의 역할은 나눠진 두 리스트의 요소를 비교하여 정렬하는 것이고 merge_sort의 역할은 하나의 리스트를 두 부분으로 나눈 후 정렬하는 것입니다.
+    #참고로 이 부분은 재귀 함수의 recursive case와 같습니다.
     #recursive case with 위에서 작성한 merge함수
 # 테스트
 print(merge_sort([1, 3, 5, 7, 9, 11, 13, 11]))
