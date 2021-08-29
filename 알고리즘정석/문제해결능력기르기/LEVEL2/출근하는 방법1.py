@@ -47,3 +47,18 @@ print(staircase(6))
 print(staircase(15))
 print(staircase(25))
 print(staircase(41))
+
+모범답안)
+def staircase(n):
+    a, b = 1, 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+
+# 테스트
+print(staircase(0))
+print(staircase(6))
+print(staircase(15))
+print(staircase(25))
+print(staircase(41))
+함수 staircase에는 파라미터 n에 비례하는 반복문 하나가 있습니다. 따라서 이 함수의 시간 복잡도는 O(n)입니다.
