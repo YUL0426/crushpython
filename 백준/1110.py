@@ -1,6 +1,6 @@
 *)Bronze 1
 
-코드1)
+코드1) 시간초과 뜸
 num = int(input())
 check = num
 new_num = 0
@@ -28,3 +28,36 @@ a%b는 a를 b로 나눈 후 그 나머지를 반환하게 된다.
 
 =>굳이 문자열로 숫자를 안받고 연산자를 잘 활용하여 문제를 풀 수 있다
 
+코드2) 시간초과 뜸
+num = int(input())
+temp = num
+cnt = 0
+
+while True:
+    a = num // 10
+    b = num % 10
+    c = (a + b) % 10
+    temp = (b*10) + c
+
+    cnt += 1
+    if(temp == num):
+        break
+
+print(cnt)
+
+코드3)내가 찾고있던 문자열을 활용한 코드
+n = input()
+num = n
+cnt = 0
+
+while 1:
+    if len(num) == 1:
+        #문자열의 길이가 1이라면
+        num = "0" + num
+        #문제에서 먼저 "주어진 수가 10보다 작다면 앞에 0을 붙여 두자리 수로 만들고"라는 조건이 있으므로
+    plus = str(int(num[0]) + int(num[1]))
+    num = num[-1] + plus[-1]
+    cnt += 1
+    if num == n:
+        print(cnt)
+        break
