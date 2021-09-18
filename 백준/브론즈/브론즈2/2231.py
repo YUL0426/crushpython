@@ -1,3 +1,5 @@
+분류) 브루트 포스
+
 코드)
 n = int(input())
 result = 0
