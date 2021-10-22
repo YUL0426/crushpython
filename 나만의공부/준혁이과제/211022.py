@@ -9,7 +9,7 @@ tmp = -99
 
 while 1:
     n = int(input())
-    if backpack[1][0] >=19:
+    if backpack[1][0] >=19 and n!= -1:
         print("you put too much")
     if -1 < n < 10 and n==tmp and backpack[1][0] < 19:
         print("you already have that")
