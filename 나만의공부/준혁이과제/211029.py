@@ -21,7 +21,7 @@ while 1:
             backpack[0].append(course[n][0])
             backpack[1][0] = backpack[1][0] + course[n][1]
             print(backpack)
-        if n != -1 and 12 <= backpack[1][0] <=19:
+        if n != -1 and 12 <= backpack[1][0] <=20:
             print("you can add", 20-backpack[1][0], "more credit")
         if n==-1 and backpack[1][0] >= 15:
             print(backpack)
